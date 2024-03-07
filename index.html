@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+    <title>View Current Location</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: red;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        h3 {
+            font-size: 1.2em;
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+        marquee {
+            width: 100%;
+            padding: 10px 0;
+            background-color: green;
+            color: white;
+            font-size: 12px;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        /* Added styles for specific elements */
+        h1 {
+            color: red;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <marquee direction="scroll">Welcome to e-Locate Owenr Login! Discover the real-time whereabouts of your cherished ones!!</marquee>
+
+    <img alt="Agent Icon" height="100" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzISJOZn0vUGfIiI_xQg2Qaz3QNlVOSNWQ9Eu4kO2KhLA89x9kHynM_PvhHEFjxG6-5p8FV9Cb4mab1sf58R05gMLQYnLr3MA_gnBqQv6J8gXqC7oPFu25m_F-l63AmORoZs2v-KKKhHYBsY52OTjXq7SVyngLX38bqh-wjA07rpV2-pxLGC_4pxUpon3W/w97-h109/locator%20ico.jpg" width="100" />
+
+    <h1>View Current Location</h1>
+    <h3>Enter Your <strong>Name</strong> &amp; The <strong>Password</strong>. If You Are Not An Owner <a href="https://masomodigital.github.io/business/" target="_blank">Sign Up Now</a> To Get Access!</h3>
+
+    <form name="myForm" onsubmit="return validateForm()">
+        <p><strong>Name:</strong> <input name="name" required="" type="text" /></p>
+        <p><strong>Password:</strong> <input name="password" required="" type="password" /></p>
+        <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+        function validateForm() {
+            var name = document.forms["myForm"]["name"].value;
+            var password = document.forms["myForm"]["password"].value;
+            if (name == "" || password == "") {
+                alert("Name and password must be filled out");
+                return false;
+            }
+            if (password !== "owner") {
+                alert("Incorrect password");
+                return false;
+            }
+            // Redirect to agent signup page
+            window.location.href = "https://console.firebase.google.com/";
+            return false;
+        }
+    </script>
+
+    <marquee direction="scroll">You will be redirected to access location details. Any question? Call 0715399449 for assistance. Thank You!</marquee>
+</body>
+</html>
